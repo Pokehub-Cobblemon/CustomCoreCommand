@@ -1,0 +1,2 @@
+# CustomCoreCommand
+Simple Plugin Commands
