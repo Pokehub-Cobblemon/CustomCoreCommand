@@ -1,0 +1,84 @@
+name: CustomCoreCommands
+version: '1.0-SNAPSHOT'
+main: com.venned.customCoreCommands.Main
+api-version: '1.21'
+author: venned
+description: Core utility commands with a fully configurable message file.
+
+commands:
+  gamemode:
+    description: Change a gamemode.
+    usage: /gamemode <type> [player]
+    aliases: [gm]
+  god:
+    description: Toggle god mode.
+    usage: /god [player]
+  openinv:
+    description: Open and edit another player's inventory.
+    usage: /openinv <player>
+    aliases: [oi, invsee]
+  enderchest:
+    description: Open an ender chest.
+    usage: /enderchest [player]
+    aliases: [ec, echest]
+  fix:
+    description: Repair the item in your hand.
+    usage: /fix [all]
+    aliases: [repair]
+  tpa:
+    description: Request to teleport to a player.
+    usage: /tpa <player>
+  tpaccept:
+    description: Accept a teleport request.
+    usage: /tpaccept [player]
+    aliases: [tpyes]
+  tpdeny:
+    description: Deny a teleport request.
+    usage: /tpdeny [player]
+    aliases: [tpno]
+  trash:
+    description: Open a trash menu.
+    usage: /trash
+    aliases: [disposal, dispose]
+  customcorecommands:
+    description: Plugin info and config reload.
+    usage: /customcorecommands [reload]
+    aliases: [ccc, customcore]
+
+permissions:
+  customcore.gamemode:
+    description: Change your own gamemode.
+    default: op
+  customcore.gamemode.others:
+    description: Change another player's gamemode.
+    default: op
+  customcore.god:
+    description: Toggle your own god mode.
+    default: op
+  customcore.god.others:
+    description: Toggle another player's god mode.
+    default: op
+  customcore.openinv:
+    description: Open and edit another player's inventory.
+    default: op
+  customcore.enderchest:
+    description: Open your own ender chest.
+    default: op
+  customcore.enderchest.others:
+    description: Open another player's ender chest.
+    default: op
+  customcore.fix:
+    description: Repair the item in your hand.
+    default: op
+  customcore.fix.all:
+    description: Repair your whole inventory with /fix all.
+    default: op
+  customcore.tpa:
+    description: Use the teleport request system.
+    default: op
+  customcore.trash:
+    description: Open the trash menu.
+    default: op
+  customcore.admin:
+    description: Reload the plugin configuration.
+    default: op

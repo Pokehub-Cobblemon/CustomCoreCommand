@@ -1,0 +1,84 @@
+# ============================================================
+#  CustomCoreCommands - configuration
+# ============================================================
+#  Colours:
+#    - Legacy codes with '&'      e.g.  &a  &c  &l  &o
+#    - Hex codes with '&#RRGGBB'  e.g.  &#55FFAA
+#  Placeholders you can use are noted per message.
+#  '%prefix%' is replaced by the "prefix" value below.
+#  Set any message to "" (empty) to hide it entirely.
+# ============================================================
+
+# Prepended wherever %prefix% appears in a message.
+prefix: "&8[&bCore&8] &r"
+
+messages:
+  # ---- shared ----
+  # %target% = name that was typed
+  no-permission: "%prefix%&cYou don't have permission to do that."
+  player-only: "%prefix%&cThis command can only be used by a player."
+  player-not-found: "%prefix%&cPlayer &e%target%&c is not online."
+  usage: "%prefix%&cUsage: &e%usage%"
+  reloaded: "%prefix%&aConfiguration reloaded."
+
+  # ---- /gamemode ----
+  # %input% %gamemode% %target% %sender%
+  gamemode-invalid: "%prefix%&cUnknown gamemode &e%input%&c. Use survival, creative, adventure or spectator."
+  gamemode-set-self: "%prefix%&aYour gamemode is now &e%gamemode%&a."
+  gamemode-set-other: "%prefix%&aSet &e%target%&a's gamemode to &e%gamemode%&a."
+  gamemode-set-by: "%prefix%&aYour gamemode was set to &e%gamemode%&a by &e%sender%&a."
+
+  # ---- /god ----
+  # %target% %sender%
+  god-enabled-self: "%prefix%&aGod mode &2enabled&a."
+  god-disabled-self: "%prefix%&aGod mode &cdisabled&a."
+  god-enabled-other: "%prefix%&aEnabled god mode for &e%target%&a."
+  god-disabled-other: "%prefix%&aDisabled god mode for &e%target%&a."
+  god-enabled-by: "%prefix%&aYour god mode was &2enabled&a by &e%sender%&a."
+  god-disabled-by: "%prefix%&aYour god mode was &cdisabled&a by &e%sender%&a."
+
+  # ---- /openinv ----
+  # %target%
+  openinv-usage: "%prefix%&cUsage: &e/openinv <player>"
+  openinv-self: "%prefix%&cUse your own inventory key to open your inventory."
+  openinv-opened: "%prefix%&aOpening &e%target%&a's inventory."
+
+  # ---- /enderchest ----
+  # %target%
+  enderchest-opened-self: "%prefix%&aOpening your ender chest."
+  enderchest-opened-other: "%prefix%&aOpening &e%target%&a's ender chest."
+
+  # ---- /fix ----
+  fix-no-item: "%prefix%&cYou must be holding an item to repair."
+  fix-not-damageable: "%prefix%&cThat item cannot be repaired."
+  fix-success: "%prefix%&aRepaired the item in your hand."
+  fix-success-all: "%prefix%&aRepaired every damaged item in your inventory."
+  fix-nothing-all: "%prefix%&cYou have nothing that needs repairing."
+
+  # ---- /tpa /tpaccept /tpdeny ----
+  # %sender% %target% %seconds%
+  tpa-usage: "%prefix%&cUsage: &e/tpa <player>"
+  tpa-self: "%prefix%&cYou cannot teleport to yourself."
+  tpa-sent: "%prefix%&aRequest sent to &e%target%&a. Expires in &e%seconds%s&a."
+  tpa-received: "%prefix%&e%sender%&a wants to teleport to you. &2/tpaccept&a or &c/tpdeny&a (&e%seconds%s&a)."
+  tpa-no-request: "%prefix%&cYou have no pending teleport request."
+  tpa-not-from: "%prefix%&cYou have no teleport request from &e%target%&c."
+  tpa-accepted-target: "%prefix%&aAccepted &e%target%&a's teleport request."
+  tpa-accepted-sender: "%prefix%&e%target%&a accepted your request. Teleporting..."
+  tpa-denied-target: "%prefix%&aDenied &e%target%&a's teleport request."
+  tpa-denied-sender: "%prefix%&e%target%&c denied your teleport request."
+  tpa-expired-sender: "%prefix%&cYour teleport request to &e%target%&c expired."
+  tpa-expired-target: "%prefix%&cThe teleport request from &e%target%&c expired."
+  tpa-requester-offline: "%prefix%&cThat player is no longer online."
+
+  # ---- /trash ----
+  trash-opened: "%prefix%&aItems left in this menu are deleted when you close it."
+
+# ---- /trash menu ----
+trash:
+  title: "&8Trash"
+  rows: 3          # 1 to 6
+
+# ---- /tpa system ----
+tpa:
+  expire-seconds: 60
